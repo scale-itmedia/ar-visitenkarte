@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Visitenkarte</title>
+    <!-- Include AR.js library -->
     <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
+    <!-- AR.js Scene -->
     <a-scene embedded arjs>
+        <!-- Marker definition -->
         <a-marker preset="hiro">
-            <!-- Pfad zur Datei im Root-Verzeichnis -->
-            <a-entity gltf-model="./model.glb" position="0 0 0" scale="0.5 0.5 0.5"></a-entity>
+            <!-- 3D Model linked from root directory -->
+            <a-entity 
+                gltf-model="model.glb" 
+                position="0 0 0" 
+                scale="0.5 0.5 0.5">
+            </a-entity>
         </a-marker>
+        <!-- Camera -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
